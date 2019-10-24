@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "79286298399",
+    "firebase_url": "https://best-wallpapers-hd-fee14.firebaseio.com",
+    "project_id": "best-wallpapers-hd-fee14",
+    "storage_bucket": "best-wallpapers-hd-fee14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:79286298399:android:14d95c71c13225f780f22a",
+        "android_client_info": {
+          "package_name": "com.best.wallpapers.hd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "79286298399-m9p3a7gqtn7ouhuk8nn43jninfgprfb3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArvj95zmOV6Yp7ri4AxZ6wAa_1gf89eHk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "79286298399-m9p3a7gqtn7ouhuk8nn43jninfgprfb3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
