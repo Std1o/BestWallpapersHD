@@ -43,6 +43,7 @@ public class CustomRecyclerViewAdapter extends FeatureRecyclerViewAdapter<Recycl
         imgList.add("https://i.ibb.co/h9JdhYc/auto.jpg");
         imgList.add("https://i.ibb.co/mbCN67g/animals.jpg");
         imgList.add("https://mobimg.b-cdn.net/pic/v2/gallery/preview/igry-lyudi-muzhchiny-44311.jpg");
+        imgList.add("https://mobimg.b-cdn.net/pic/v2/gallery/preview/abstrakciya-fon-33946.jpg");
     }
 
     public void swapData(List<String> data) {

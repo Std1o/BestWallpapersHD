@@ -39,5 +39,6 @@ public class SelectTypeActivity extends AppCompatActivity {
         dummyData.add("Автомобили");
         dummyData.add("Животные");
         dummyData.add("Игры");
+        dummyData.add("Абстракция");
     }
 }

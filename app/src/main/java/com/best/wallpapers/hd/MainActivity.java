@@ -133,6 +133,22 @@ public class MainActivity extends AppCompatActivity {
         list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/igry-ir_ankov_world_of_tanks-tanki-15045.jpg", "Игры"));
         list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/igry-zhazhda_skorosti_need_for_speed-38642.jpg", "Игры"));
 
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/abstrakciya-fon-20149.jpg", "Абстракция"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/abstrakciya-fon-41314.jpg", "Абстракция"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/abstrakciya-fon-33946.jpg", "Абстракция"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/abstrakciya-fon-40169.jpg", "Абстракция"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/abstrakciya-fon-40418.jpg", "Абстракция"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/abstrakciya-fon-15876.jpg", "Абстракция"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/abstrakciya-fon-zory-27968.jpg", "Абстракция"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/abstrakciya-fon-41100.jpg", "Абстракция"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/abstrakciya-fon-raduga-19742.jpg", "Абстракция"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/abstrakciya-fon-31096.jpg", "Абстракция"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/abstrakciya-fon-zory-28625.jpg", "Абстракция"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/abstrakciya-fon-37676.jpg", "Абстракция"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/abstrakciya-fon-40658.jpg", "Абстракция"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/abstrakciya-fon-6876.jpg", "Абстракция"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/abstrakciya-fon-37430.jpg", "Абстракция"));
+
         return list;
     }
 
