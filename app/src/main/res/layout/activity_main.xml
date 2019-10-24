@@ -18,4 +18,21 @@
         android:layout_height="match_parent"
         app:card_loop="true" />
 
+    <ImageView
+        android:id="@+id/toolbar_menu_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        app:srcCompat="@drawable/settings_new"
+        android:gravity="center"
+        android:visibility="visible"
+        android:onClick="onClick"/>
+
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
 </FrameLayout>

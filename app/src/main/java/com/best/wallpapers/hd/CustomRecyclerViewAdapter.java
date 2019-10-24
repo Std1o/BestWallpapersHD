@@ -125,9 +125,9 @@ public class CustomRecyclerViewAdapter extends FeatureRecyclerViewAdapter<Recycl
             ivBackground.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    MainActivity.type = SelectTypeActivity.dummyData.get(getAdapterPosition());
+                    MainActivity.type = GridMenuFragment.dummyData.get(getAdapterPosition());
                     CustomRecyclerViewAdapter.mContext.startActivity(mIntent);
-                    Log.i("TEXT BY POSITION ", SelectTypeActivity.dummyData.get(getAdapterPosition()));
+                    Log.i("TEXT BY POSITION ", GridMenuFragment.dummyData.get(getAdapterPosition()));
                 }
             });
         }

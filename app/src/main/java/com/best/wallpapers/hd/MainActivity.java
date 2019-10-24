@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.Glide;
@@ -18,6 +19,8 @@ import com.bumptech.glide.request.transition.Transition;
 import com.best.wallpapers.hd.cardviewslider.CardViewPager;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import jp.wasabeef.glide.transformations.BlurTransformation;
@@ -27,8 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
     private CardViewPager viewPager;
 
-    public static String type = "Люди";
+    public static String type = "Все";
     private ImageView mainBG;
+    private GridMenuFragment mGridMenuFragment = GridMenuFragment.newInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +40,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         viewPager = (CardViewPager) findViewById(R.id.viewpager);
         mainBG = (ImageView) findViewById(R.id.main_bg);
+        initViewPager();
+    }
 
-        viewPager.bind(getSupportFragmentManager(), new MyCardHandler(), filterList());
+    private void initViewPager() {
+        List rvList = new ArrayList();
+        if (type.equals("Все")) {
+            for (int i = 0; i < getData().size(); i++) {
+                rvList.add(getData().get(i).imageUrl);
+            }
+            Collections.shuffle(rvList);
+        }
+        else {
+            rvList.addAll(filterList());
+        }
+        viewPager.bind(getSupportFragmentManager(), new MyCardHandler(),rvList);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -48,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 Log.d("MainActivity", "position:" + position);
                 Glide.with(MainActivity.this)
-                        .load(filterList().get(position))
+                        .load(rvList.get(position))
                         .apply(new RequestOptions()
                                 .transform(new BlurTransformation(5)))
                         .into(new SimpleTarget<Drawable>() {
@@ -161,6 +178,15 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return list;
+    }
+
+    public void onClick(View view) {
+        if (0 == getSupportFragmentManager().getBackStackEntryCount()) {
+            FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
+            tx.replace(R.id.main_frame, mGridMenuFragment);
+            tx.addToBackStack(null);
+            tx.commit();
+        }
     }
 
 }
