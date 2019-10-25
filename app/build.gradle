@@ -39,4 +39,5 @@ dependencies {
         exclude group: 'com.github.bumptech.glide', module: 'glide'
     }
     implementation 'com.facebook.android:facebook-android-sdk:4.42.0'
+    implementation 'com.facebook.android:facebook-marketing:4.42.0'
 }
