@@ -166,6 +166,22 @@ public class MainActivity extends AppCompatActivity {
         list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/abstrakciya-fon-6876.jpg", "Абстракция"));
         list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/abstrakciya-fon-37430.jpg", "Абстракция"));
 
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/arhitektura-ejfeleva_bashnya-pejzazh-38167.jpg", "Архитектура"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/arhitektura-ejfeleva_bashnya-parizh-pejzazh-reka-21862.jpg", "Архитектура"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/arhitektura-obekty-42081.jpg", "Архитектура"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/arhitektura-goroda-pejzazh-37920.jpg", "Архитектура"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/arhitektura-ejfeleva_bashnya-pejzazh-35020.jpg", "Архитектура"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/arhitektura-aziya-pejzazh-38152.jpg", "Архитектура"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/arhitektura-derevya-osen-ozera-pejzazh-21537.jpg", "Архитектура"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/arhitektura-29944.jpg", "Архитектура"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/arhitektura-interer-37061.jpg", "Архитектура"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/arhitektura-doma-pejzazh-35803.jpg", "Архитектура"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/arhitektura-mayaki-pejzazh-36231.jpg", "Архитектура"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/arhitektura-goroda-noch-pejzazh-36992.jpg", "Архитектура"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/arhitektura-pejzazh-zamki-37611.jpg", "Архитектура"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/arhitektura-pejzazh-40167.jpg", "Архитектура"));
+        list.add(new DataModel("https://mobimg.b-cdn.net/pic/v2/gallery/preview/arhitektura-moskva-pejzazh-36982.jpg", "Архитектура"));
+
         return list;
     }
 

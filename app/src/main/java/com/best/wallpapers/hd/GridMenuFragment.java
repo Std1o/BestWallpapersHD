@@ -71,5 +71,6 @@ public class GridMenuFragment extends Fragment {
         dummyData.add("Животные");
         dummyData.add("Игры");
         dummyData.add("Абстракция");
+        dummyData.add("Архитектура");
     }
 }
