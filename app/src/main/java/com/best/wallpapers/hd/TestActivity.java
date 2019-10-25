@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -60,6 +61,7 @@ public class TestActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
+        Toast.makeText(this, "Установка...", Toast.LENGTH_LONG).show();
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
