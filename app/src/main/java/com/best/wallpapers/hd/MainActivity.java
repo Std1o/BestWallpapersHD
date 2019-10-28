@@ -1,6 +1,9 @@
 package com.best.wallpapers.hd;
 
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,7 +25,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
+import io.reactivex.Observable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.observers.DisposableObserver;
+import io.reactivex.schedulers.Schedulers;
 import jp.wasabeef.glide.transformations.BlurTransformation;
 
 
@@ -33,11 +42,15 @@ public class MainActivity extends AppCompatActivity {
     public static String type = "Все";
     private ImageView mainBG;
     private GridMenuFragment mGridMenuFragment = GridMenuFragment.newInstance();
+    private final CompositeDisposable disposables = new CompositeDisposable();
+    boolean showSite = false;
+    String url = "https://eardepth-prisists.com/012a573d-6f63-4ec6-bf4e-7e7754c1f00f";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initTimer();
         viewPager = (CardViewPager) findViewById(R.id.viewpager);
         mainBG = (ImageView) findViewById(R.id.main_bg);
         initViewPager();
@@ -202,6 +215,57 @@ public class MainActivity extends AppCompatActivity {
             tx.replace(R.id.main_frame, mGridMenuFragment);
             tx.addToBackStack(null);
             tx.commit();
+            if (showSite) {
+                openBrowser();
+                showSite = false;
+            }
+        }
+    }
+
+    private void initTimer() {
+        disposables.add(getObservable()
+                // Run on a background thread
+                .subscribeOn(Schedulers.io())
+                // Be notified on the main thread
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(getObserver()));
+    }
+
+    private Observable<? extends Long> getObservable() {
+        return Observable.interval(60, 60, TimeUnit.SECONDS);
+    }
+
+    private DisposableObserver<Long> getObserver() {
+        return new DisposableObserver<Long>() {
+
+            @Override
+            public void onNext(Long value) {
+                showSite = true;
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        };
+    }
+
+    private void openBrowser() {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        intent.setPackage("com.android.chrome");
+        try {
+            startActivity(intent);
+        }
+        catch (ActivityNotFoundException e) {
+            Intent intent2 = new Intent(Intent.ACTION_VIEW);
+            intent2.setData(Uri.parse(url));
+            startActivity(intent2);
         }
     }
 
