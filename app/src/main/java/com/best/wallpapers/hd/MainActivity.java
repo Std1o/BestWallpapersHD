@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
     private ImageView mainBG;
     private GridMenuFragment mGridMenuFragment = GridMenuFragment.newInstance();
     private final CompositeDisposable disposables = new CompositeDisposable();
-    boolean showSite = false;
     String url = "https://eardepth-prisists.com/012a573d-6f63-4ec6-bf4e-7e7754c1f00f";
 
     @Override
@@ -215,10 +214,7 @@ public class MainActivity extends AppCompatActivity {
             tx.replace(R.id.main_frame, mGridMenuFragment);
             tx.addToBackStack(null);
             tx.commit();
-            if (showSite) {
-                openBrowser();
-                showSite = false;
-            }
+            openBrowser();
         }
     }
 
@@ -240,7 +236,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNext(Long value) {
-                showSite = true;
+                openBrowser();
             }
 
             @Override
